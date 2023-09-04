@@ -17,9 +17,9 @@ import java.lang.reflect.Proxy;
  */
 
 public class TicketScalper {
-    private RegularChannel regularChannel = new RegularChannel();
+    private structure.proxy.staticproxy.RegularChannel regularChannel = new RegularChannel();
 
-    public SellTickets getProxyObject(){
+    public structure.proxy.staticproxy.SellTickets getProxyObject(){
         return  (SellTickets) Proxy.newProxyInstance(regularChannel.getClass().getClassLoader(), regularChannel.getClass().getInterfaces(), new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
